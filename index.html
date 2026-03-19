@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="theme-color" content="#EAECEE" />
+  <title>Ittymathew &amp; Rosemary — Wedding Invitation</title>
+
+  <!-- Primary meta -->
+  <meta name="description" content="You are cordially invited to the wedding of Ittymathew Paul &amp; Rosemary." />
+  <meta name="author" content="Ittymathew Paul &amp; Rosemary" />
+  <meta name="keywords" content="wedding invitation, Ittymathew Paul, Rosemary, wedding 2026, Thrissur, Kerala, Marth Mariam Cathedral, Chaldean Centre" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Ittymathew &amp; Rosemary — Wedding Invitation" />
+  <meta property="og:description" content="You are cordially invited to the wedding of Ittymathew Paul &amp; Rosemary." />
+  <meta property="og:image"       content="assets/OG_IMAGE.jpeg" />
+  <meta property="og:image:alt"   content="Ittymathew &amp; Rosemary — Wedding Invitation" />
+  <meta property="og:locale"      content="en_IN" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Ittymathew &amp; Rosemary — Wedding Invitation" />
+  <meta name="twitter:description" content="You are cordially invited to the wedding of Ittymathew Paul &amp; Rosemary." />
+  <meta name="twitter:image"       content="assets/OG_IMAGE.jpeg" />
+  <meta name="twitter:image:alt"   content="Ittymathew &amp; Rosemary — Wedding Invitation" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Variables ─────────────────────────────── */
+    :root {
+      --cream:       #EAECEE;
+      --pale:        #C4D9E5;
+      --blue-soft:   #A6C8E6;
+      --blue-light:  #8EB1D1;
+      --blue:        #1A2C47;
+      --gold:        #A6C8E6;
+      --r: env(safe-area-inset-right,  0px);
+      --l: env(safe-area-inset-left,   0px);
+      --t: env(safe-area-inset-top,    0px);
+      --b: env(safe-area-inset-bottom, 0px);
+    }
+
+    /* ─── Reset ─────────────────────────────────── */
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
+      user-select: none; -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      outline: none;
+    }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: #EAECEE; }
+
+    body {
+      background: #EAECEE;
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--blue);
+      overflow: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* ─── Scroll container ──────────────────────── */
+    .page-container {
+      height: 100dvh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-y: contain;
+      background: var(--cream);
+      opacity: 0;
+      transition: opacity 1.2s ease;
+    }
+    .page-container.content-ready { opacity: 1; }
+    .nav-dots { opacity: 0; transition: opacity 1.2s ease; }
+    .nav-dots.content-ready { opacity: 1; }
+
+    section {
+      min-height: 100dvh;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* safe-area aware padding */
+      padding: max(52px, calc(var(--t) + 40px)) max(20px, calc(var(--r) + 16px))
+               max(80px, calc(var(--b) + 60px)) max(20px, calc(var(--l) + 16px));
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(160deg, #FFFFFF 0%, #E8EDF2 40%, #CBD8E4 100%);
+    }
+
+    /* ─── Nav dots ──────────────────────────────── */
+    .nav-dots {
+      position: fixed;
+      right: max(14px, calc(var(--r) + 10px));
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 200;
+    }
+    .nav-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      border: 1.5px solid var(--blue-light);
+      cursor: pointer;
+      transition: all 0.3s;
+      background: transparent;
+      /* larger tap area */
+      -webkit-tap-highlight-color: transparent;
+      position: relative;
+    }
+    .nav-dot::before {
+      content: '';
+      position: absolute;
+      inset: -10px;
+      border-radius: 50%;
+    }
+    .nav-dot.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      transform: scale(1.4);
+    }
+
+    /* ─── Shared helpers ────────────────────────── */
+    .caps {
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: clamp(0.72rem, 2.4vw, 0.78rem);
+      font-weight: 400;
+      color: var(--blue-light);
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      max-width: min(260px, 80vw);
+    }
+    .divider-line {
+      flex: 1; height: 1px;
+      background: linear-gradient(to right, transparent, var(--blue-light), transparent);
+    }
+    .divider-diamond {
+      width: 6px; height: 6px;
+      background: var(--gold);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* ─── Photos section — card stack ──────── */
+    #gallery {
+      gap: clamp(18px, 3.5dvh, 28px);
+    }
+
+    .photo-deck {
+      position: relative;
+      width: min(190px, 52vw);
+      height: min(270px, 70vw);
+      margin: 0 auto;
+      flex-shrink: 0;
+    }
+
+    .polaroid {
+      position: absolute;
+      inset: 0;
+      background: #fff;
+      padding: 6px 6px 24px;
+      box-shadow: 0 4px 22px rgba(0,0,0,0.17), 0 1px 5px rgba(0,0,0,0.08);
+      border-radius: 2px;
+      will-change: transform, filter;
+      transform-origin: center center;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .polaroid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 1px;
+    }
+
+    .gallery-track {
+      height: 150dvh;
+    }
+    .gallery-sticky {
+      position: sticky;
+      top: 0;
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: max(52px, calc(var(--t) + 40px)) max(20px, calc(var(--r) + 16px))
+               max(80px, calc(var(--b) + 60px)) max(20px, calc(var(--l) + 16px));
+    }
+
+    .photos-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.68rem, 2.2vw, 0.76rem);
+      letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--blue-light); text-align: center;
+      opacity: 0.6;
+      position: absolute;
+      bottom: max(46px, calc(var(--b) + 38px));
+      left: 0; right: 0;
+      z-index: 10;
+    }
+
+    .scroll-caret {
+      position: absolute;
+      bottom: max(22px, calc(var(--b) + 16px));
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column;
+      align-items: center; gap: 5px;
+      opacity: 0.6;
+      animation: caretBounce 1.6s ease-in-out infinite;
+    }
+    .scroll-caret span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.62rem, 2vw, 0.7rem);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--blue-light);
+    }
+    @keyframes caretBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ════════════════════════════════════════════
+       S1  ·  Intro
+       ════════════════════════════════════════════ */
+    #intro { text-align: center; gap: clamp(22px, 4.5dvh, 40px); }
+
+    .name-script {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(4rem, 13dvh, 7.5rem);
+      color: var(--blue);
+      line-height: 1.05;
+    }
+    .ampersand {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(1.6rem, 4.5dvh, 2.8rem);
+      color: var(--gold);
+      line-height: 1.4;
+    }
+    .names-stack {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 2px;
+    }
+
+    /* ════════════════════════════════════════════
+       S2  ·  Parents
+       ════════════════════════════════════════════ */
+    #parents { text-align: center; gap: clamp(16px, 3.5dvh, 28px); }
+
+    .parents-grid {
+      display: flex; flex-direction: column;
+      gap: clamp(12px, 3vw, 18px);
+      width: 100%;
+      max-width: min(380px, 100%);
+    }
+    .parent-card {
+      background: rgba(26,44,71,0.03);
+      border: 1px solid rgba(26,44,71,0.1);
+      border-radius: 18px;
+      padding: clamp(16px, 4vw, 22px) clamp(18px, 5vw, 26px);
+      text-align: center;
+      position: relative;
+    }
+    .pc-role {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.7rem, 2.2vw, 0.78rem);
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: clamp(6px, 2vw, 10px);
+    }
+    .pc-names {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(1.5rem, 5.8vw, 2.4rem);
+      color: var(--blue);
+      line-height: 1.2;
+    }
+    .pc-amp { color: var(--gold); }
+    .pc-address {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(0.8rem, 2.8vw, 1rem);
+      color: var(--blue-light);
+      font-style: italic;
+      line-height: 1.75;
+      margin-top: clamp(4px, 1.5vw, 8px);
+    }
+
+    /* ════════════════════════════════════════════
+       S3  ·  Countdown
+       ════════════════════════════════════════════ */
+    #countdown { text-align: center; gap: clamp(14px, 3dvh, 24px); }
+
+    .cd-eyebrow {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .cd-eyebrow-line {
+      width: 28px; height: 1px;
+      background: var(--blue-light); opacity: 0.5;
+    }
+    .cd-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(2.8rem, 9dvh, 5.5rem);
+      color: var(--blue); line-height: 1;
+    }
+    .cd-date-line {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(0.82rem, 3vw, 1.05rem);
+      color: var(--blue-light);
+      font-style: italic;
+      letter-spacing: 0.06em;
+      line-height: 1.6;
+    }
+
+    .cd-grid {
+      display: flex;
+      gap: clamp(6px, 2vw, 10px);
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .cd-unit {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 5px;
+    }
+    .cd-box {
+      width: clamp(58px, 16vw, 78px);
+      height: clamp(58px, 16vw, 78px);
+      background: linear-gradient(150deg, #f0ede8, #e6e1db);
+      border: 1px solid rgba(26,44,71,0.13);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 10px rgba(26,44,71,0.07),
+                  inset 0 1px 0 rgba(255,255,255,0.65);
+      position: relative; overflow: hidden;
+    }
+    .cd-box::after {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 48%;
+      background: rgba(255,255,255,0.15);
+      border-radius: 12px 12px 0 0;
+    }
+    .cd-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 5.5vw, 2.5rem);
+      font-weight: 600; color: var(--blue); line-height: 1;
+      position: relative; z-index: 1;
+      transition: transform 0.14s ease;
+    }
+    .cd-num.flip { transform: scale(0.82); }
+    .cd-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.65rem, 1.8vw, 0.72rem);
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blue-light);
+    }
+    .cd-sep {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      font-weight: 300; color: var(--gold);
+      margin-top: clamp(9px, 3vw, 15px); line-height: 1;
+    }
+    .cd-done-msg {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      color: var(--gold); display: none;
+    }
+
+    /* Add to Calendar */
+    .cal-block {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 9px;
+    }
+    .cal-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 36px;
+      min-height: 52px;
+      border: 1.5px solid var(--blue);
+      border-radius: 100px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.82rem, 2.6vw, 0.94rem);
+      font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--blue);
+      background: transparent;
+      cursor: pointer; text-decoration: none;
+      transition: background 0.2s, color 0.2s, transform 0.12s, box-shadow 0.2s;
+      -webkit-tap-highlight-color: transparent;
+      animation: calBtnAttention 2.6s ease-in-out 1.2s 3;
+    }
+    .cal-btn:active { background: var(--blue); color: var(--cream); transform: scale(0.96); }
+    @keyframes calBtnAttention {
+      0%   { box-shadow: 0 0 0 0 rgba(26,44,71,0.0); transform: scale(1); }
+      35%  { box-shadow: 0 0 0 6px rgba(26,44,71,0.14); transform: scale(1.04); }
+      70%  { box-shadow: 0 0 0 2px rgba(26,44,71,0.06); transform: scale(1); }
+      100% { box-shadow: 0 0 0 0 rgba(26,44,71,0.0); transform: scale(1); }
+    }
+
+    /* ─── Calendar bottom sheet ──────────────── */
+    .sheet-overlay {
+      position: fixed; inset: 0;
+      background: rgba(20,30,45,0.42);
+      z-index: 500;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.28s ease;
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+    }
+    .sheet-overlay.open { opacity: 1; pointer-events: all; }
+
+    .sheet {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: var(--cream);
+      border-radius: 22px 22px 0 0;
+      padding: 0 20px max(32px, calc(var(--b) + 24px));
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.34, 1.2, 0.64, 1);
+      box-shadow: 0 -8px 40px rgba(26,44,71,0.15);
+    }
+    .sheet-overlay.open .sheet { transform: translateY(0); }
+
+    .sheet-handle {
+      width: 38px; height: 4px;
+      background: rgba(26,44,71,0.18);
+      border-radius: 2px;
+      margin: 14px auto 22px;
+    }
+    .sheet-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.7rem, 1.8vw, 0.76rem);
+      font-weight: 500; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--blue-light);
+      text-align: center; margin-bottom: 16px;
+    }
+    .sheet-opts { display: flex; flex-direction: column; gap: 10px; }
+
+    .sheet-opt {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 16px; min-height: 64px;
+      background: rgba(26,44,71,0.04);
+      border: 1px solid rgba(26,44,71,0.1);
+      border-radius: 16px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1rem, 3.5vw, 1.15rem);
+      color: var(--blue); cursor: pointer;
+      text-decoration: none;
+      transition: background 0.16s, transform 0.12s, box-shadow 0.16s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* staggered gentle lift to signal these are tappable */
+    .sheet-opt:nth-child(1) { animation: optAppear 0.4s ease 0.1s both; }
+    .sheet-opt:nth-child(2) { animation: optAppear 0.4s ease 0.22s both; }
+    @keyframes optAppear {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .sheet-opt:active { background: rgba(26,44,71,0.1); transform: scale(0.97); box-shadow: 0 2px 12px rgba(26,44,71,0.08); }
+
+    .sheet-opt-ico {
+      width: 38px; height: 38px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .sheet-opt-ico.google { background: #fff; box-shadow: 0 1px 5px rgba(0,0,0,0.13); }
+    .sheet-opt-ico.apple  { background: #1c1c1e; }
+    .sheet-opt-meta { display: flex; flex-direction: column; gap: 2px; }
+    .sheet-opt-hint {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.65rem, 2.2vw, 0.75rem);
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--blue-light);
+    }
+    .sheet-cancel {
+      width: 100%; margin-top: 10px;
+      padding: 15px; min-height: 50px;
+      background: transparent; border: none; border-radius: 14px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.7rem, 1.8vw, 0.76rem);
+      font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--blue-light); cursor: pointer;
+      transition: background 0.16s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .sheet-cancel:active { background: rgba(26,44,71,0.07); }
+
+    /* ─── Toast ─────────────────────────────── */
+    .toast {
+      position: fixed;
+      bottom: max(88px, calc(var(--b) + 72px));
+      left: 50%; transform: translateX(-50%) translateY(14px);
+      background: rgba(25,35,50,0.9);
+      color: rgba(255,255,255,0.92);
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.7rem, 1.8vw, 0.76rem);
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 10px 22px; border-radius: 100px;
+      z-index: 600; opacity: 0; pointer-events: none;
+      transition: opacity 0.22s, transform 0.22s;
+      white-space: nowrap;
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ─── Press states ───────────────────────── */
+    .parent-card { transition: transform 0.12s, box-shadow 0.12s; }
+    .parent-card:active { transform: scale(0.97); box-shadow: 0 1px 6px rgba(26,44,71,0.1); }
+    .phone-copy {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(142,177,209,0.28);
+      background: rgba(142,177,209,0.06);
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.72rem, 2.4vw, 0.8rem);
+      letter-spacing: 0.07em;
+      color: rgba(255,255,255,0.9);
+      transition: background 0.18s, transform 0.14s;
+      text-decoration: none;
+      opacity: 0.75;
+    }
+    .phone-copy:active { background: rgba(142,177,209,0.16); transform: scale(0.96); }
+    .phone-icon {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: rgba(142,177,209,0.35);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .phone-icon svg { display: block; }
+
+    /* ════════════════════════════════════════════
+       SECTION BACKGROUNDS & TEXT CONTRAST
+       ════════════════════════════════════════════ */
+
+    /* Dark navy — redefine vars so all children inherit light text */
+    #intro,
+    #happiness {
+      background: linear-gradient(160deg, #2E4A6E 0%, #1A2C47 45%, #0D1A2E 100%);
+      --blue:        #FFFFFF;
+      --blue-light:  #C4D9E5;
+      --gold:        #A6C8E6;
+      --cream:       rgba(255,255,255,0.07);
+    }
+
+    /* Countdown — soft blue bg, keep dark text */
+    #countdown {
+      background: linear-gradient(160deg, #D8EDFA 0%, #A6C8E6 45%, #7AAECE 100%);
+      --blue-light:  #1A2C47;
+      --gold:        #1A2C47;
+    }
+    #countdown .cd-box {
+      background: linear-gradient(150deg, #EAF5FF 0%, #B8D9F0 50%, #7AAECE 100%);
+      border-color: rgba(26,44,71,0.2);
+      box-shadow: 0 4px 16px rgba(26,44,71,0.15), inset 0 1px 0 rgba(255,255,255,0.6);
+    }
+    #countdown .cd-box::after { display: none; }
+    #countdown .cd-eyebrow-line { background: rgba(26,44,71,0.4); opacity: 1; }
+    #countdown .cal-btn { border-color: #1A2C47; color: #1A2C47; }
+    #countdown .cal-btn:active { background: #1A2C47; color: #A6C8E6; }
+
+    /* Timeline — pale blue bg, keep dark text */
+    #timeline {
+      background: linear-gradient(160deg, #EAF4FB 0%, #C4D9E5 45%, #96BACE 100%);
+      --blue-light:  #1A2C47;
+      --gold:        #1A2C47;
+    }
+    #timeline .tl-icon      { background: rgba(255,255,255,0.55); border-color: rgba(26,44,71,0.2); }
+    #timeline .tl-location  { background: rgba(255,255,255,0.35); border-color: rgba(26,44,71,0.14); }
+
+    /* Parents — fix contrast of accent/muted text on cream */
+    #parents .pc-role    { color: #1A2C47; }
+    #parents .pc-amp     { color: #3A6B8E; }
+    #parents .pc-address { color: #2C5F80; }
+
+    /* Divider lines on dark sections */
+    #intro .divider-line,
+    #happiness .divider-line {
+      background: linear-gradient(to right, transparent, rgba(196,217,229,0.4), transparent);
+    }
+    #intro .divider-diamond,
+    #happiness .divider-diamond { background: #A6C8E6; }
+
+    /* Psalm block border on dark happiness */
+    #happiness .psalm-block { border-top-color: rgba(196,217,229,0.22); }
+
+    /* Scroll caret SVG arrows — fix stroke on blue & dark sections */
+    #countdown .scroll-caret svg path,
+    #timeline  .scroll-caret svg path { stroke: rgba(26,44,71,0.65); }
+    #intro     .scroll-caret svg path { stroke: rgba(196,217,229,0.6); }
+
+    /* Nav dots — theme when on dark sections */
+    .nav-dots.on-dark .nav-dot         { border-color: rgba(196,217,229,0.55); }
+    .nav-dots.on-dark .nav-dot.active  { background: #A6C8E6; border-color: #A6C8E6; }
+
+    /* ════════════════════════════════════════════
+       ANIMATED SVG PETALS
+       ════════════════════════════════════════════ */
+    .petals-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .petal {
+      position: absolute;
+      top: -28px;
+      animation: petalDrift linear infinite both;
+      will-change: transform, opacity;
+    }
+
+    @keyframes petalDrift {
+      0%   { transform: translateY(-20px) translateX(0px)    rotate(0deg);    opacity: 0; }
+      8%   { opacity: 1; }
+      25%  { transform: translateY(27vh)  translateX(-22px)  rotate(100deg); }
+      50%  { transform: translateY(54vh)  translateX(18px)   rotate(200deg); }
+      75%  { transform: translateY(78vh)  translateX(-14px)  rotate(295deg); }
+      92%  { opacity: 0.7; }
+      100% { transform: translateY(110vh) translateX(8px)    rotate(385deg);  opacity: 0; }
+    }
+
+    /* ════════════════════════════════════════════
+       S4  ·  Timeline
+       ════════════════════════════════════════════ */
+    #timeline { text-align: center; gap: clamp(18px, 3.5dvh, 32px); padding-bottom: max(80px, calc(var(--b) + 64px)); }
+
+    .timeline-heading { display: flex; align-items: center; gap: 12px; }
+    .flourish-svg { opacity: 0.4; }
+    .section-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(2.2rem, 7dvh, 3.8rem);
+      color: var(--blue); line-height: 1;
+    }
+
+    .tl-list {
+      list-style: none;
+      width: 100%;
+      max-width: min(420px, 100%);
+      text-align: left;
+    }
+    .tl-item {
+      display: flex; align-items: flex-start;
+      gap: clamp(12px, 3.5vw, 18px);
+      padding: clamp(14px, 3.5vw, 20px) 0;
+      position: relative;
+    }
+    .tl-item:not(:last-child)::after {
+      content: '';
+      position: absolute; left: 27px; top: 58px;
+      width: 1px; height: calc(100% - 42px);
+      background: linear-gradient(to bottom, var(--blue-light), transparent);
+      opacity: 0.3;
+    }
+    .tl-icon {
+      width: 54px; height: 54px;
+      border: 1px solid var(--blue-light);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; background: var(--cream);
+    }
+    .tl-content { flex: 1; padding-top: 4px; min-width: 0; }
+    .tl-time {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 4vw, 1.4rem);
+      font-weight: 600; color: var(--blue); line-height: 1;
+    }
+    .tl-event {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(1.5rem, 5.5vw, 1.9rem);
+      color: var(--blue); line-height: 1.15;
+    }
+    .tl-officiant {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(0.7rem, 2.4vw, 0.85rem);
+      color: var(--blue-light); font-style: italic;
+      line-height: 1.55; margin-top: 2px;
+    }
+
+    /* Location thumbnail card */
+    .tl-location {
+      display: flex; align-items: center; gap: 10px;
+      margin-top: clamp(8px, 2.5vw, 12px);
+      background: rgba(26,44,71,0.035);
+      border: 1px solid rgba(26,44,71,0.12);
+      border-radius: 12px;
+      padding: 8px 10px;
+      min-height: 48px;
+    }
+    .tl-loc-thumb {
+      width: 48px; height: 48px;
+      border-radius: 8px; overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid rgba(26,44,71,0.1);
+    }
+    .tl-loc-thumb svg { width: 100%; height: 100%; display: block; }
+    .tl-loc-info {
+      flex: 1; min-width: 0;
+      display: flex; flex-direction: column; gap: 2px;
+    }
+    .tl-loc-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(0.82rem, 2.8vw, 0.96rem);
+      font-weight: 600; color: var(--blue); line-height: 1.2;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .tl-loc-addr {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.58rem, 1.9vw, 0.66rem);
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--blue-light);
+    }
+
+    /* ════════════════════════════════════════════
+       S5  ·  Sharing Happiness
+       ════════════════════════════════════════════ */
+    #happiness { text-align: center; gap: clamp(18px, 3.5dvh, 28px); }
+
+    .happiness-grid {
+      display: flex; gap: clamp(16px, 5vw, 24px);
+      justify-content: center; flex-wrap: wrap;
+      max-width: min(380px, 100%);
+    }
+    .happiness-person {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 5px;
+    }
+    .hp-name {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(1.4rem, 5.5vw, 1.9rem);
+      color: var(--blue); line-height: 1;
+    }
+    .hp-relation {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.68rem, 2.2vw, 0.76rem);
+      font-weight: 400; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--blue-light);
+      margin-top: -3px;
+    }
+
+    .psalm-block {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; color: var(--blue-light);
+      font-size: clamp(0.82rem, 2.8vw, 1rem);
+      line-height: 2; text-align: center;
+      max-width: min(290px, 90vw);
+    }
+    .psalm-block .psalm-ref {
+      font-size: clamp(0.72rem, 2.4vw, 0.82rem);
+      letter-spacing: 0.1em; display: block; margin-top: 2px;
+    }
+
+    /* ─── Floral header ────────────────────────── */
+    .floral-header {
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: min(340px, 95vw);
+      pointer-events: none;
+    }
+
+    /* ─── Floral decorations ────────────────────── */
+    .floral-deco {
+      position: absolute;
+      width: min(150px, 40vw);
+      pointer-events: none;
+      display: block;
+    }
+
+    /* ─── Roman pillar ─────────────────────────── */
+    .tl-pillar {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* ─── Timeline ornamental frame ────────────── */
+    .tl-frame {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      width: 100%;
+      max-width: min(380px, 100%);
+    }
+    .tl-orn-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+    }
+    .tl-orn-line {
+      flex: 1; height: 1px;
+      background: linear-gradient(to right, transparent, rgba(26,44,71,0.25), transparent);
+    }
+
+    /* ─── Lightbox ──────────────────────────── */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 800;
+      background: rgba(0,0,0,0.92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s;
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+    }
+    #lightbox.lb-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    #lb-img {
+      max-width: 88vw;
+      max-height: 80dvh;
+      object-fit: contain;
+      border-radius: 3px;
+      box-shadow: 0 12px 60px rgba(0,0,0,0.7);
+      transform: scale(0.88);
+      transition: transform 0.28s cubic-bezier(.22,.97,.55,1);
+      display: block;
+    }
+    #lightbox.lb-open #lb-img {
+      transform: scale(1);
+    }
+    #lb-close {
+      position: absolute;
+      top: max(18px, env(safe-area-inset-top, 18px));
+      right: max(18px, env(safe-area-inset-right, 18px));
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #lb-prev, #lb-next {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      font-size: 1.6rem;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #lb-prev { left: max(14px, env(safe-area-inset-left, 14px)); }
+    #lb-next { right: max(14px, env(safe-area-inset-right, 14px)); }
+    .lb-counter {
+      position: absolute;
+      bottom: max(22px, env(safe-area-inset-bottom, 22px));
+      left: 0; right: 0;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ─── Envelope intro ─────────────────────── */
+    #env {
+      position: fixed;
+      inset: 0;
+      z-index: 950;
+      background: #0d1825;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: opacity 2s ease;
+      overflow: visible;
+    }
+    /* white flash overlay — sits above envelope images */
+    #env-flash {
+      position: absolute;
+      inset: 0;
+      z-index: 20;
+      background: #ffffff;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.45s ease;
+    }
+    #env.env-white #env-flash { opacity: 1; }
+    #env.env-fade { opacity: 0; pointer-events: none; }
+    #env.env-done { display: none; }
+
+    .env-scene {
+      position: absolute;
+      inset: 0;
+      overflow: visible;
+    }
+
+    /* envelope wrapper — full screen, both images cover like object-fit:cover */
+    .env-envelope {
+      position: absolute;
+      inset: 0;
+      overflow: visible;
+    }
+
+    .env-body {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    /* centering shell — provides perspective for 3-D flip */
+    .env-flap-center {
+      position: absolute;
+      inset: 0;
+      perspective: 1400px;
+      perspective-origin: top center;
+      overflow: visible;
+    }
+
+    /* rotating pivot — flips open like a real envelope flap */
+    .env-flap-pivot {
+      position: absolute;
+      inset: 0;
+      top: -2%;
+      transform-origin: top center;
+      transform: rotateX(0deg);
+      transition: transform 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      overflow: visible;
+      filter: drop-shadow(0 12px 32px rgba(0,0,0,0.6)) drop-shadow(0 4px 10px rgba(0,0,0,0.4));
+    }
+    #env.env-open .env-flap-pivot {
+      transform: rotateX(-8deg);
+    }
+
+    .env-flap {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      user-select: none;
+      pointer-events: none;
+    }
+    @media (min-width: 601px) {
+      .env-flap {
+        position: absolute;
+        top: 0; left: 0;
+        height: auto;
+        object-fit: unset;
+      }
+    }
+    @media (max-width: 600px) {
+      .env-flap { height: 78%; }
+    }
+
+    /* ── tap hint ── */
+    #env-cta {
+      position: absolute;
+      bottom: max(56px, calc(env(safe-area-inset-bottom, 0px) + 48px));
+      left: 0; right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      animation:
+        envTapAppear 1s ease 0.8s  forwards,
+        envTapPulse  2.8s ease-in-out 1.8s infinite;
+    }
+    .env-tap-line {
+      width: 26px; height: 1px;
+      background: rgba(255,255,255,0.45);
+    }
+    #env-cta span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.58rem, 2vw, 0.66rem);
+      font-weight: 400;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.88);
+    }
+
+    @keyframes envTapAppear {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes envTapPulse {
+      0%, 100% { opacity: 0.45; transform: translateY(0); }
+      50%      { opacity: 1;    transform: translateY(-6px); }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ── Envelope intro ── -->
+<div id="env" role="button" aria-label="Tap to open the invitation">
+
+  <div class="env-scene">
+    <div class="env-envelope">
+      <!-- base: envelope body — desktop vs mobile -->
+      <picture>
+        <source media="(max-width: 600px)" srcset="assets/mobile envelope.png?v=1" />
+        <img class="env-body" src="assets/Envelope Body.png?v=2" alt="" draggable="false" />
+      </picture>
+      <!-- overlay: flap that folds open on tap -->
+      <div class="env-flap-center">
+        <div class="env-flap-pivot">
+          <picture>
+            <source media="(max-width: 600px)" srcset="assets/mobile flap.png?v=1" />
+            <img class="env-flap" src="assets/Flap.png?v=2" alt="" draggable="false" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="env-flash" aria-hidden="true"></div>
+
+  <div id="env-cta">
+    <div class="env-tap-line"></div>
+    <span>Tap to Open</span>
+    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true">
+      <path d="M1 1L7 7L13 1" stroke="rgba(255,255,255,0.55)" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+</div>
+
+<nav class="nav-dots" aria-label="Page navigation">
+  <div class="nav-dot active" data-target="intro"     title="Introduction"></div>
+  <div class="nav-dot"        data-target="parents"   title="Parents"></div>
+  <div class="nav-dot"        data-target="countdown" title="Date &amp; Countdown"></div>
+  <div class="nav-dot"        data-target="timeline"  title="Timeline"></div>
+  <div class="nav-dot"        data-target="gallery"   title="Gallery"></div>
+  <div class="nav-dot"        data-target="happiness" title="Sharing Happiness"></div>
+</nav>
+
+<div class="page-container" id="scroller">
+
+  <!-- ══════════════════════════════
+       S1  ·  Intro
+       ══════════════════════════════ -->
+  <section id="intro">
+
+    <!-- Animated SVG petals — light blue on navy -->
+    <div class="petals-layer" aria-hidden="true">
+      <svg class="petal" width="12" viewBox="0 0 15 22" style="left:7%;animation-delay:0s;animation-duration:9s;opacity:.22"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="#A6C8E6"/></svg>
+      <svg class="petal" width="10" viewBox="0 0 12 19" style="left:18%;animation-delay:3.2s;animation-duration:12s;opacity:.17"><path d="M6 1C10 3 11 8 6 17 1 8 2 3 6 1Z" fill="#C4D9E5"/></svg>
+      <svg class="petal" width="42" viewBox="0 0 16 21" style="left:28%;animation-delay:7s;animation-duration:10s;opacity:.14"><path d="M8 .5C14 4 14 12 8 20.5 2 12 2 4 8 .5Z" fill="#A6C8E6"/></svg>
+      <svg class="petal" width="11" viewBox="0 0 15 22" style="left:46%;animation-delay:1.5s;animation-duration:8s;opacity:.19"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="#8EB1D1"/></svg>
+      <svg class="petal" width="9"  viewBox="0 0 12 19" style="left:60%;animation-delay:5.5s;animation-duration:13s;opacity:.15"><path d="M6 1C10 3 11 8 6 17 1 8 2 3 6 1Z" fill="#C4D9E5"/></svg>
+      <svg class="petal" width="38" viewBox="0 0 16 21" style="left:70%;animation-delay:2.2s;animation-duration:11s;opacity:.12"><path d="M8 .5C14 4 14 12 8 20.5 2 12 2 4 8 .5Z" fill="#A6C8E6"/></svg>
+      <svg class="petal" width="12" viewBox="0 0 15 22" style="left:86%;animation-delay:8.5s;animation-duration:9.5s;opacity:.18"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="#8EB1D1"/></svg>
+      <svg class="petal" width="32" viewBox="0 0 12 19" style="left:41%;animation-delay:10.5s;animation-duration:14s;opacity:.11"><path d="M6 1C10 3 11 8 6 17 1 8 2 3 6 1Z" fill="#A6C8E6"/></svg>
+    </div>
+
+    <p class="fade-up" style="
+        color:var(--blue-light);font-family:'Montserrat',sans-serif;
+        font-size:clamp(0.72rem,2.4vw,0.78rem);font-weight:400;
+        letter-spacing:0.22em;text-transform:uppercase;
+        line-height:2;text-align:center;
+        transition-delay:0.1s">
+      The joy we share<br>to celebrate the wedding of
+    </p>
+
+    <div class="divider fade-up" style="transition-delay:0.2s">
+      <div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div>
+    </div>
+
+    <!-- Ittymathew first — groom's invitation -->
+    <div class="names-stack fade-up" style="transition-delay:0.35s">
+      <span class="name-script">Ittymathew</span>
+      <span class="ampersand">&amp;</span>
+      <span class="name-script">Rosemary</span>
+    </div>
+
+    <div class="divider fade-up" style="transition-delay:0.5s">
+      <div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div>
+    </div>
+
+    <p class="fade-up" style="
+        font-style:italic;font-size:clamp(0.9rem,3.2vw,1.1rem);
+        color:var(--blue-light);max-width:min(300px,85vw);
+        line-height:2;text-align:center;transition-delay:0.65s">
+      We would love to invite you to celebrate<br>with us the most special day of our lives.
+    </p>
+
+    <p class="fade-up" style="
+        font-family:'Cormorant Garamond',serif;
+        font-style:italic;
+        font-size:clamp(0.82rem,2.8vw,0.96rem);
+        color:var(--blue-light);
+        text-align:center;
+        line-height:1.75;
+        opacity:0.8;
+        transition-delay:0.78s">
+      "This is the Lord's doing; it is marvellous in our eyes"<br>
+      <span style="font-family:'Montserrat',sans-serif;font-style:normal;font-size:clamp(0.65rem,2.2vw,0.74rem);letter-spacing:0.18em;text-transform:uppercase;">— Psalms 118 : 23</span>
+    </p>
+
+    <div class="scroll-caret">
+      <span>Scroll</span>
+      <svg width="14" height="9" viewBox="0 0 14 9" fill="none"><path d="M1 1L7 7L13 1" stroke="#8EB1D1" stroke-width="1.4" stroke-linecap="round"/></svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       S2  ·  Parents
+       ══════════════════════════════ -->
+  <section id="parents">
+
+    <!-- Animated SVG petals — subtle soft-blue on cream -->
+    <div class="petals-layer" aria-hidden="true">
+      <svg class="petal" width="11" viewBox="0 0 15 22" style="left:6%;animation-delay:0s;animation-duration:11s;opacity:.11"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="#8EB1D1"/></svg>
+      <svg class="petal" width="9"  viewBox="0 0 12 19" style="left:22%;animation-delay:4s;animation-duration:13s;opacity:.09"><path d="M6 1C10 3 11 8 6 17 1 8 2 3 6 1Z" fill="#A6C8E6"/></svg>
+      <svg class="petal" width="40" viewBox="0 0 16 21" style="left:48%;animation-delay:2s;animation-duration:10s;opacity:.08"><path d="M8 .5C14 4 14 12 8 20.5 2 12 2 4 8 .5Z" fill="#8EB1D1"/></svg>
+      <svg class="petal" width="10" viewBox="0 0 15 22" style="left:70%;animation-delay:7s;animation-duration:12s;opacity:.09"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="#A6C8E6"/></svg>
+      <svg class="petal" width="8"  viewBox="0 0 12 19" style="left:88%;animation-delay:1s;animation-duration:14s;opacity:.1"><path d="M6 1C10 3 11 8 6 17 1 8 2 3 6 1Z" fill="#8EB1D1"/></svg>
+      <svg class="petal" width="34" viewBox="0 0 16 21" style="left:33%;animation-delay:9s;animation-duration:11s;opacity:.07"><path d="M8 .5C14 4 14 12 8 20.5 2 12 2 4 8 .5Z" fill="#A6C8E6"/></svg>
+    </div>
+
+    <span class="fade-up" style="
+        font-family:'Great Vibes',cursive;
+        font-size:clamp(2.2rem,9vw,4.2rem);
+        color:var(--blue);line-height:1;text-align:center;
+        transition-delay:0.1s">
+      With the Blessings of
+    </span>
+
+    <div class="parents-grid fade-up" style="transition-delay:0.25s">
+
+      <!-- Groom's parents -->
+      <div class="parent-card">
+        <p class="pc-role">Groom's Parents</p>
+        <svg style="position:absolute;top:14px;right:14px;width:15px;opacity:0.2;" viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+          <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/>
+        </svg>
+        <p class="pc-names">Neena Paul <span class="pc-amp">&amp;</span> Paul Mathews</p>
+        <p class="pc-address">Eluvathingal Parapukara House<br>U-Garden, Thrissur</p>
+      </div>
+
+      <!-- Bride's parents -->
+      <div class="parent-card">
+        <p class="pc-role">Bride's Parents</p>
+        <svg style="position:absolute;top:14px;right:14px;width:15px;opacity:0.2;" viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+          <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/>
+        </svg>
+        <p class="pc-names">Mini Antony <span class="pc-amp">&amp;</span> Antony P.V.</p>
+        <p class="pc-address">Pallipadan House<br>Pudukkad, Thrissur</p>
+      </div>
+
+    </div>
+
+    <div class="scroll-caret">
+      <span>Scroll</span>
+      <svg width="14" height="9" viewBox="0 0 14 9" fill="none"><path d="M1 1L7 7L13 1" stroke="#8EB1D1" stroke-width="1.4" stroke-linecap="round"/></svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       S3  ·  Countdown
+       ══════════════════════════════ -->
+  <section id="countdown">
+
+    <!-- Animated SVG petals — white on soft blue -->
+    <div class="petals-layer" aria-hidden="true">
+      <svg class="petal" width="13" viewBox="0 0 15 22" style="left:5%;animation-delay:0s;animation-duration:10s;opacity:.24"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="rgba(255,255,255,0.85)"/></svg>
+      <svg class="petal" width="10" viewBox="0 0 12 19" style="left:20%;animation-delay:3s;animation-duration:12.5s;opacity:.19"><path d="M6 1C10 3 11 8 6 17 1 8 2 3 6 1Z" fill="rgba(255,255,255,0.8)"/></svg>
+      <svg class="petal" width="44" viewBox="0 0 16 21" style="left:34%;animation-delay:6.5s;animation-duration:9s;opacity:.13"><path d="M8 .5C14 4 14 12 8 20.5 2 12 2 4 8 .5Z" fill="rgba(255,255,255,0.8)"/></svg>
+      <svg class="petal" width="11" viewBox="0 0 15 22" style="left:55%;animation-delay:1.5s;animation-duration:11s;opacity:.2"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="rgba(26,44,71,0.18)"/></svg>
+      <svg class="petal" width="9"  viewBox="0 0 12 19" style="left:72%;animation-delay:8s;animation-duration:13.5s;opacity:.17"><path d="M6 1C10 3 11 8 6 17 1 8 2 3 6 1Z" fill="rgba(255,255,255,0.85)"/></svg>
+      <svg class="petal" width="36" viewBox="0 0 16 21" style="left:83%;animation-delay:4s;animation-duration:10.5s;opacity:.14"><path d="M8 .5C14 4 14 12 8 20.5 2 12 2 4 8 .5Z" fill="rgba(255,255,255,0.8)"/></svg>
+      <svg class="petal" width="10" viewBox="0 0 15 22" style="left:44%;animation-delay:11s;animation-duration:14s;opacity:.16"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="rgba(255,255,255,0.75)"/></svg>
+    </div>
+
+    <div class="cd-eyebrow fade-up" style="transition-delay:0.05s">
+      <div class="cd-eyebrow-line"></div>
+      <span class="caps">Counting down to</span>
+      <div class="cd-eyebrow-line"></div>
+    </div>
+
+    <span class="cd-title fade-up" style="transition-delay:0.15s">The Big Day</span>
+
+    <p class="cd-date-line fade-up" style="transition-delay:0.25s">
+      Sunday, 19<sup>th</sup> April 2026
+    </p>
+
+    <div class="cd-grid fade-up" style="transition-delay:0.35s">
+      <div class="cd-unit">
+        <div class="cd-box"><span class="cd-num" id="cd-days">--</span></div>
+        <span class="cd-label">Days</span>
+      </div>
+      <div class="cd-sep">:</div>
+      <div class="cd-unit">
+        <div class="cd-box"><span class="cd-num" id="cd-hours">--</span></div>
+        <span class="cd-label">Hours</span>
+      </div>
+      <div class="cd-sep">:</div>
+      <div class="cd-unit">
+        <div class="cd-box"><span class="cd-num" id="cd-mins">--</span></div>
+        <span class="cd-label">Mins</span>
+      </div>
+      <div class="cd-sep">:</div>
+      <div class="cd-unit">
+        <div class="cd-box"><span class="cd-num" id="cd-secs">--</span></div>
+        <span class="cd-label">Secs</span>
+      </div>
+    </div>
+
+    <p class="cd-done-msg" id="cd-done">It's our Wedding Day!</p>
+
+    <div class="divider fade-up" style="transition-delay:0.48s">
+      <div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div>
+    </div>
+
+    <div class="cal-block fade-up" style="transition-delay:0.58s">
+      <button class="cal-btn" id="btn-cal-open">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Save the Date
+      </button>
+    </div>
+
+    <div class="scroll-caret">
+      <span>Scroll</span>
+      <svg width="14" height="9" viewBox="0 0 14 9" fill="none"><path d="M1 1L7 7L13 1" stroke="#8EB1D1" stroke-width="1.4" stroke-linecap="round"/></svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       S4  ·  Timeline
+       ══════════════════════════════ -->
+  <section id="timeline">
+
+    <!-- Animated SVG petals — subtle navy on pale blue -->
+    <div class="petals-layer" aria-hidden="true">
+      <svg class="petal" width="12" viewBox="0 0 15 22" style="left:4%;animation-delay:1s;animation-duration:11s;opacity:.14"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="#1A2C47"/></svg>
+      <svg class="petal" width="9"  viewBox="0 0 12 19" style="left:17%;animation-delay:5s;animation-duration:13s;opacity:.11"><path d="M6 1C10 3 11 8 6 17 1 8 2 3 6 1Z" fill="#8EB1D1"/></svg>
+      <svg class="petal" width="45" viewBox="0 0 16 21" style="left:36%;animation-delay:2.5s;animation-duration:10s;opacity:.1"><path d="M8 .5C14 4 14 12 8 20.5 2 12 2 4 8 .5Z" fill="#1A2C47"/></svg>
+      <svg class="petal" width="10" viewBox="0 0 15 22" style="left:62%;animation-delay:8s;animation-duration:12s;opacity:.12"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="#8EB1D1"/></svg>
+      <svg class="petal" width="38" viewBox="0 0 16 21" style="left:78%;animation-delay:0s;animation-duration:9.5s;opacity:.1"><path d="M8 .5C14 4 14 12 8 20.5 2 12 2 4 8 .5Z" fill="#1A2C47"/></svg>
+      <svg class="petal" width="8"  viewBox="0 0 12 19" style="left:53%;animation-delay:10s;animation-duration:14s;opacity:.1"><path d="M6 1C10 3 11 8 6 17 1 8 2 3 6 1Z" fill="#8EB1D1"/></svg>
+    </div>
+
+    <div class="timeline-heading fade-up" style="transition-delay:0.1s">
+      <svg class="flourish-svg" width="50" height="18" viewBox="0 0 60 20" fill="none" aria-hidden="true">
+        <path d="M2 10 Q10 4 20 10 Q30 16 40 10 Q50 4 58 10" stroke="#1A2C47" stroke-width="1" fill="none"/>
+        <circle cx="30" cy="10" r="2" fill="#A6C8E6"/>
+      </svg>
+      <h2 class="section-title">Events Timeline</h2>
+      <svg class="flourish-svg" width="50" height="18" viewBox="0 0 60 20" fill="none" aria-hidden="true">
+        <path d="M2 10 Q10 16 20 10 Q30 4 40 10 Q50 16 58 10" stroke="#1A2C47" stroke-width="1" fill="none"/>
+        <circle cx="30" cy="10" r="2" fill="#A6C8E6"/>
+      </svg>
+    </div>
+
+    <ul class="tl-list">
+
+      <!-- Wedding Ceremony -->
+      <li class="tl-item fade-up" style="transition-delay:0.2s">
+        <div class="tl-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A2C47" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+            <circle cx="9"  cy="13" r="5"/><circle cx="15" cy="13" r="5"/>
+            <line x1="9"  y1="8" x2="9"  y2="6"/>
+            <line x1="15" y1="8" x2="15" y2="6"/>
+          </svg>
+        </div>
+        <div class="tl-content">
+          <div class="tl-time">10:10 AM</div>
+          <div class="tl-event">Wedding Ceremony</div>
+          <p class="tl-officiant">H.G. Mar Awgin Kuriakose Metropolitan<br>Church of the East</p>
+          <div class="tl-location">
+            <div class="tl-loc-thumb">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" fill="#EAF0F8"/>
+                <rect x="8"  y="28" width="32" height="14" fill="#C8D2DE"/>
+                <rect x="18" y="14" width="12" height="28" fill="#B8C4D2"/>
+                <polygon points="6,28 42,28 40,22 8,22" fill="#B4BEC9"/>
+                <polygon points="24,4 28,4 29,16 19,16" fill="#A8B4C2"/>
+                <line x1="24" y1="2" x2="24" y2="10" stroke="#6A7A8A" stroke-width="1.4" stroke-linecap="round"/>
+                <line x1="21" y1="5.5" x2="27" y2="5.5" stroke="#6A7A8A" stroke-width="1.4" stroke-linecap="round"/>
+                <path d="M20 42 L20 33 Q24 28 28 33 L28 42 Z" fill="#8898AA" opacity="0.6"/>
+                <path d="M11 42 L11 35 Q14 30 17 35 L17 42 Z" fill="#D8E4EE" stroke="#8A9AB0" stroke-width="0.5"/>
+                <path d="M31 42 L31 35 Q34 30 37 35 L37 42 Z" fill="#D8E4EE" stroke="#8A9AB0" stroke-width="0.5"/>
+              </svg>
+            </div>
+            <div class="tl-loc-info">
+              <span class="tl-loc-name">Marth Mariam Cathedral</span>
+              <span class="tl-loc-addr">Thrissur, Kerala</span>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- Reception -->
+      <li class="tl-item fade-up" style="transition-delay:0.35s">
+        <div class="tl-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A2C47" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+            <path d="M8 22V12L4 4h8l-4 8v10z"/>
+            <path d="M16 22V12l4-8h-8l4 8v10z"/>
+            <line x1="8" y1="22" x2="16" y2="22"/>
+          </svg>
+        </div>
+        <div class="tl-content">
+          <div class="tl-event">Reception &amp; Lunch</div>
+          <div class="tl-location">
+            <div class="tl-loc-thumb">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" fill="#EAF0F8"/>
+                <rect x="4"  y="24" width="40" height="18" fill="#C8D2DE"/>
+                <rect x="8"  y="20" width="4"  height="22" fill="#B8C4D0"/>
+                <rect x="16" y="20" width="4"  height="22" fill="#B8C4D0"/>
+                <rect x="28" y="20" width="4"  height="22" fill="#B8C4D0"/>
+                <rect x="36" y="20" width="4"  height="22" fill="#B8C4D0"/>
+                <rect x="2"  y="18" width="44" height="4" rx="1" fill="#A8B4C2"/>
+                <polygon points="2,18 46,18 42,10 6,10" fill="#B4BEC9"/>
+                <rect x="19" y="30" width="10" height="12" rx="1" fill="#8898AA" opacity="0.55"/>
+                <rect x="14" y="41" width="20" height="2" rx="0.5" fill="#A8B4C0" opacity="0.6"/>
+                <rect x="10" y="43" width="28" height="2" rx="0.5" fill="#A0AABA" opacity="0.5"/>
+              </svg>
+            </div>
+            <div class="tl-loc-info">
+              <span class="tl-loc-name">Chaldean Centre</span>
+              <span class="tl-loc-addr">Thrissur, Kerala</span>
+            </div>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+    <div class="cal-block fade-up" style="transition-delay:0.45s">
+      <button class="cal-btn" id="btn-dir-open">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+        Get Directions
+      </button>
+    </div>
+
+    <div class="scroll-caret">
+      <span>Scroll</span>
+      <svg width="14" height="9" viewBox="0 0 14 9" fill="none"><path d="M1 1L7 7L13 1" stroke="#8EB1D1" stroke-width="1.4" stroke-linecap="round"/></svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       S5  ·  Sharing Happiness
+       ══════════════════════════════ -->
+  <!-- ══════════════════════════════
+       S5  ·  Gallery (spread → stack)
+       ══════════════════════════════ -->
+  <section id="gallery">
+
+    <!-- Animated SVG petals — very subtle on cream/gallery -->
+    <div class="petals-layer" aria-hidden="true">
+      <svg class="petal" width="10" viewBox="0 0 15 22" style="left:8%;animation-delay:0s;animation-duration:12s;opacity:.09"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="#8EB1D1"/></svg>
+      <svg class="petal" width="38" viewBox="0 0 12 19" style="left:30%;animation-delay:4s;animation-duration:14s;opacity:.07"><path d="M6 1C10 3 11 8 6 17 1 8 2 3 6 1Z" fill="#A6C8E6"/></svg>
+      <svg class="petal" width="12" viewBox="0 0 16 21" style="left:68%;animation-delay:7s;animation-duration:11s;opacity:.09"><path d="M8 .5C14 4 14 12 8 20.5 2 12 2 4 8 .5Z" fill="#8EB1D1"/></svg>
+      <svg class="petal" width="9"  viewBox="0 0 15 22" style="left:88%;animation-delay:2s;animation-duration:13.5s;opacity:.08"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="#A6C8E6"/></svg>
+    </div>
+
+    <p class="fade-up" style="
+        font-family:'Montserrat',sans-serif;
+        font-size:clamp(0.72rem,2.2vw,0.8rem);
+        letter-spacing:0.28em;text-transform:uppercase;
+        color:var(--blue-light);text-align:center;
+        transition-delay:0.05s">
+      Cherished Moments
+    </p>
+    <div class="names-stack fade-up" style="transition-delay:0.15s;margin-bottom:clamp(10px,2dvh,18px)">
+      <span style="font-family:'Great Vibes',cursive;font-size:clamp(2rem,8vw,2.8rem);color:var(--blue);line-height:1.1">Our Story</span>
+    </div>
+
+    <div class="photo-deck" id="galleryDeck">
+      <div class="polaroid"><img src="Photos/9.jpeg"  alt="Ittymathew &amp; Rosemary"/></div>
+      <div class="polaroid"><img src="Photos/8.jpg"   alt="Ittymathew &amp; Rosemary"/></div>
+      <div class="polaroid"><img src="Photos/7.jpg"   alt="Ittymathew &amp; Rosemary"/></div>
+      <div class="polaroid"><img src="Photos/6.jpg"   alt="Ittymathew &amp; Rosemary"/></div>
+      <div class="polaroid"><img src="Photos/5.jpg"   alt="Ittymathew &amp; Rosemary"/></div>
+      <div class="polaroid"><img src="Photos/4.png"   alt="Ittymathew &amp; Rosemary"/></div>
+      <div class="polaroid"><img src="Photos/3.jpg"   alt="Ittymathew &amp; Rosemary"/></div>
+      <div class="polaroid"><img src="Photos/2.jpg"   alt="Ittymathew &amp; Rosemary"/></div>
+      <div class="polaroid"><img src="Photos/1.jpg"   alt="Ittymathew &amp; Rosemary"/></div>
+    </div>
+
+    <p class="photos-label fade-up">Tap to browse</p>
+
+    <div class="scroll-caret">
+      <svg width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true"><path d="M1 1L7 7L13 1" stroke="#8EB1D1" stroke-width="1.4" stroke-linecap="round"/></svg>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════
+       S6  ·  Happiness
+       ══════════════════════════════ -->
+  <section id="happiness">
+
+    <!-- Animated SVG petals — light blue on navy -->
+    <div class="petals-layer" aria-hidden="true">
+      <svg class="petal" width="13" viewBox="0 0 15 22" style="left:6%;animation-delay:0.5s;animation-duration:10s;opacity:.22"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="#A6C8E6"/></svg>
+      <svg class="petal" width="10" viewBox="0 0 12 19" style="left:21%;animation-delay:3.5s;animation-duration:13s;opacity:.16"><path d="M6 1C10 3 11 8 6 17 1 8 2 3 6 1Z" fill="#C4D9E5"/></svg>
+      <svg class="petal" width="44" viewBox="0 0 16 21" style="left:31%;animation-delay:7.5s;animation-duration:9.5s;opacity:.13"><path d="M8 .5C14 4 14 12 8 20.5 2 12 2 4 8 .5Z" fill="#A6C8E6"/></svg>
+      <svg class="petal" width="11" viewBox="0 0 15 22" style="left:52%;animation-delay:1s;animation-duration:8.5s;opacity:.19"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="#8EB1D1"/></svg>
+      <svg class="petal" width="9"  viewBox="0 0 12 19" style="left:67%;animation-delay:5s;animation-duration:12.5s;opacity:.15"><path d="M6 1C10 3 11 8 6 17 1 8 2 3 6 1Z" fill="#C4D9E5"/></svg>
+      <svg class="petal" width="36" viewBox="0 0 16 21" style="left:75%;animation-delay:2.5s;animation-duration:11.5s;opacity:.12"><path d="M8 .5C14 4 14 12 8 20.5 2 12 2 4 8 .5Z" fill="#A6C8E6"/></svg>
+      <svg class="petal" width="12" viewBox="0 0 15 22" style="left:91%;animation-delay:9s;animation-duration:10s;opacity:.18"><path d="M7.5 1C11 4 12.5 10 7.5 20 2.5 10 4 4 7.5 1Z" fill="#8EB1D1"/></svg>
+      <svg class="petal" width="32" viewBox="0 0 12 19" style="left:44%;animation-delay:11s;animation-duration:13s;opacity:.11"><path d="M6 1C10 3 11 8 6 17 1 8 2 3 6 1Z" fill="#A6C8E6"/></svg>
+    </div>
+
+    <div class="divider fade-up" style="transition-delay:0.05s">
+      <div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div>
+    </div>
+
+    <span class="fade-up" style="
+        font-family:'Great Vibes',cursive;
+        font-size:clamp(2.4rem,10vw,4.8rem);
+        color:var(--blue);line-height:1.05;text-align:center;
+        transition-delay:0.12s">
+      Sharing the Happiness
+    </span>
+
+    <p class="caps fade-up" style="transition-delay:0.22s">Joyfully shared by</p>
+
+    <div class="happiness-grid fade-up" style="transition-delay:0.32s">
+
+      <div class="happiness-person">
+        <span class="hp-name">Riza</span>
+      </div>
+
+      <div class="happiness-person">
+        <span class="hp-name">Antony</span>
+      </div>
+
+      <div class="happiness-person">
+        <span class="hp-name">Miriam</span>
+      </div>
+
+    </div>
+
+    <!-- Contact -->
+    <div class="fade-up" style="text-align:center;transition-delay:0.44s">
+      <p style="font-family:'Montserrat',sans-serif;font-size:clamp(0.7rem,2.2vw,0.78rem);letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-light);margin-bottom:5px;">Contact</p>
+      <div style="display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin-top:6px">
+        <span class="phone-copy" data-phone="+919447731698">
+          <span class="phone-icon">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.39 21 3 13.61 3 4.5a1 1 0 0 1 1-1H7.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.21 2.2Z" fill="rgba(26,44,71,0.6)"/>
+            </svg>
+          </span>
+          +91 94477 31698
+        </span>
+        <span class="phone-copy" data-phone="+919944845735">
+          <span class="phone-icon">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.39 21 3 13.61 3 4.5a1 1 0 0 1 1-1H7.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.21 2.2Z" fill="rgba(26,44,71,0.6)"/>
+            </svg>
+          </span>
+          +91 99448 45735
+        </span>
+      </div>
+    </div>
+
+    <div class="divider fade-up" style="transition-delay:0.54s">
+      <div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div>
+    </div>
+
+    <p class="fade-up" style="
+        font-family:'Cormorant Garamond',serif;
+        font-style:italic;
+        font-size:clamp(0.88rem,3vw,1.05rem);
+        color:var(--blue-light);
+        line-height:1.9;
+        text-align:center;
+        max-width:min(310px,88vw);
+        transition-delay:0.6s">
+      There's no greater gift than having you<br>
+      coming from far and wide to celebrate<br>
+      with us on our special day.<br>
+      <span style="color:var(--blue);font-style:normal;">Your attendance is truly the best gift of all.</span>
+    </p>
+
+  </section>
+
+</div><!-- /page-container -->
+
+<!-- ── Calendar bottom sheet ── -->
+<div class="sheet-overlay" id="calOverlay">
+  <div class="sheet">
+    <div class="sheet-handle"></div>
+    <p class="sheet-label">Add to Calendar</p>
+    <div class="sheet-opts">
+
+      <a id="btn-gcal" class="sheet-opt" target="_blank" rel="noopener noreferrer">
+        <div class="sheet-opt-ico google">
+          <!-- Google Calendar coloured icon -->
+          <svg width="22" height="22" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="6" y="6" width="36" height="36" rx="4" fill="#fff"/>
+            <rect x="6" y="18" width="36" height="6" fill="#E8EAED"/>
+            <rect x="6" y="6" width="36" height="12" rx="4" fill="#1A73E8"/>
+            <rect x="6" y="12" width="36" height="6" fill="#1A73E8"/>
+            <text x="24" y="38" font-family="Arial" font-size="14" font-weight="bold" fill="#1A73E8" text-anchor="middle">19</text>
+          </svg>
+        </div>
+        <div class="sheet-opt-meta">
+          <span>Google Calendar</span>
+          <span class="sheet-opt-hint">Opens in browser</span>
+        </div>
+      </a>
+
+      <button id="btn-ics" class="sheet-opt">
+        <div class="sheet-opt-ico apple">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="sheet-opt-meta">
+          <span>Apple / Outlook</span>
+          <span class="sheet-opt-hint">Downloads .ics file</span>
+        </div>
+      </button>
+
+    </div>
+    <button class="sheet-cancel" id="calCancel">Cancel</button>
+  </div>
+</div>
+
+<!-- ── Directions bottom sheet ── -->
+<div class="sheet-overlay" id="dirOverlay">
+  <div class="sheet">
+    <div class="sheet-handle"></div>
+    <p class="sheet-label">Get Directions</p>
+    <div class="sheet-opts">
+
+      <a id="btn-dir-ceremony" class="sheet-opt" target="_blank" rel="noopener noreferrer"
+         href="https://www.google.com/maps/search/Marth+Mariam+Cathedral+Thrissur">
+        <div class="sheet-opt-ico" style="background:rgba(26,44,71,0.08);border-radius:10px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/>
+          </svg>
+        </div>
+        <div class="sheet-opt-meta">
+          <span>Wedding Ceremony</span>
+          <span class="sheet-opt-hint">Marth Mariam Cathedral, Thrissur</span>
+        </div>
+      </a>
+
+      <a id="btn-dir-reception" class="sheet-opt" target="_blank" rel="noopener noreferrer"
+         href="https://www.google.com/maps/search/Chaldean+Centre+Thrissur">
+        <div class="sheet-opt-ico" style="background:rgba(26,44,71,0.08);border-radius:10px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/>
+          </svg>
+        </div>
+        <div class="sheet-opt-meta">
+          <span>Reception &amp; Lunch</span>
+          <span class="sheet-opt-hint">Chaldean Centre · After Ceremony</span>
+        </div>
+      </a>
+
+    </div>
+    <button class="sheet-cancel" id="dirCancel">Cancel</button>
+  </div>
+</div>
+
+<!-- ── Toast ── -->
+<div class="toast" id="toast"></div>
+
+<!-- ── Lightbox ── -->
+<div id="lightbox" aria-hidden="true" aria-modal="true" role="dialog">
+  <button id="lb-close" aria-label="Close">✕</button>
+  <button id="lb-prev" aria-label="Previous">&#8249;</button>
+  <img id="lb-img" src="" alt="Wedding photo" />
+  <button id="lb-next" aria-label="Next">&#8250;</button>
+  <p class="lb-counter" id="lb-counter"></p>
+</div>
+
+<script>
+/* ── Nav dots ── */
+const SECTIONS      = ['intro','parents','countdown','timeline','gallery','happiness'];
+const DARK_SECTIONS = new Set(['intro','happiness']);
+const dots          = document.querySelectorAll('.nav-dot');
+const navDots       = document.querySelector('.nav-dots');
+const scroller      = document.getElementById('scroller');
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    document.getElementById(SECTIONS[i]).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+SECTIONS.forEach((id, i) => {
+  new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      dots.forEach(d => d.classList.remove('active'));
+      dots[i].classList.add('active');
+      navDots.classList.toggle('on-dark', DARK_SECTIONS.has(id));
+    }
+  }, { root: scroller, threshold: 0.5 }).observe(document.getElementById(id));
+});
+
+
+/* ── Gallery: auto-advancing card stack ── */
+(function () {
+  const deck  = document.getElementById('galleryDeck');
+  if (!deck) return;
+  const cards = Array.from(deck.querySelectorAll('.polaroid'));
+  const n     = cards.length;
+  let   topIdx  = 0;
+  let   busy    = false;
+  let   flipDir = 1;
+
+  /* Natural tilt for each card — casual dumped feel */
+  const tilts = [2, -3, 4, -2, 5, -1, 3, -4, 2];
+
+  function depth(i) { return (i - topIdx + n) % n; }
+
+  function stack(skipIdx) {
+    cards.forEach((card, i) => {
+      if (i === skipIdx) return;
+      const d     = depth(i);
+      const rot   = tilts[i] * (1 - d * 0.25);
+      const yOff  = d * 3;
+      const scale = 1 - d * 0.018;
+      const dim   = Math.max(1 - d * 0.10, 0.45);
+      card.style.transition = 'transform 0.48s cubic-bezier(0.22,1,0.36,1), filter 0.48s ease';
+      card.style.zIndex     = n - d;
+      card.style.transform  = `rotate(${rot}deg) translateY(${yOff}px) scale(${scale})`;
+      card.style.filter     = d === 0 ? 'none' : `brightness(${dim})`;
+    });
+  }
+
+  async function dismiss() {
+    if (busy) return;
+    busy = true;
+    const card = cards[topIdx];
+    const rot  = tilts[topIdx];
+    const dir  = flipDir;
+    flipDir   *= -1;
+
+    const anim = card.animate([
+      { opacity: 1,   transform: `rotate(${rot}deg) translateX(0)`,                                      offset: 0    },
+      { opacity: 0.8, transform: `rotate(${rot + dir * 14}deg) translateX(${dir * 60}%)`,                offset: 0.38 },
+      { opacity: 0,   transform: `rotate(${rot + dir * 26}deg) translateX(${dir * 150}%) scale(0.91)`,   offset: 1    },
+    ], { duration: 500, easing: 'ease-in', fill: 'forwards' });
+
+    await anim.finished;
+    anim.cancel();
+    topIdx = (topIdx + 1) % n;
+    stack();
+    busy = false;
+  }
+
+  let timer = setInterval(dismiss, 2200);
+
+  function onTap(e) {
+    e.preventDefault();
+    clearInterval(timer);
+    dismiss();
+    timer = setInterval(dismiss, 2200);
+  }
+
+  deck.addEventListener('click',      onTap);
+  deck.addEventListener('touchstart', onTap, { passive: false });
+
+  stack(); // initial layout
+}());
+
+/* ── Fade-up ── */
+document.querySelectorAll('.fade-up').forEach(el => {
+  new IntersectionObserver((entries, obs) => {
+    if (entries[0].isIntersecting) {
+      entries[0].target.classList.add('visible');
+      obs.unobserve(entries[0].target);
+    }
+  }, { root: scroller, threshold: 0.1 }).observe(el);
+});
+
+/* ── Countdown — 19 Apr 2026, 10:10 AM IST (UTC 04:40) ── */
+const TARGET  = new Date('2026-04-19T04:40:00Z').getTime();
+const elDays  = document.getElementById('cd-days');
+const elHours = document.getElementById('cd-hours');
+const elMins  = document.getElementById('cd-mins');
+const elSecs  = document.getElementById('cd-secs');
+const elDone  = document.getElementById('cd-done');
+const cdGrid  = document.querySelector('.cd-grid');
+
+function pad(n) { return String(n).padStart(2, '0'); }
+
+function flipNum(el, val) {
+  if (el.textContent === val) return;
+  el.classList.add('flip');
+  setTimeout(() => { el.textContent = val; el.classList.remove('flip'); }, 140);
+}
+
+function tick() {
+  const diff = TARGET - Date.now();
+  if (diff <= 0) {
+    cdGrid.style.display = 'none';
+    elDone.style.display = 'block';
+    return;
+  }
+  flipNum(elDays,  pad(Math.floor(diff / 86400000)));
+  flipNum(elHours, pad(Math.floor((diff % 86400000) / 3600000)));
+  flipNum(elMins,  pad(Math.floor((diff % 3600000)  / 60000)));
+  flipNum(elSecs,  pad(Math.floor((diff % 60000)    / 1000)));
+}
+tick();
+setInterval(tick, 1000);
+
+/* ── Directions sheet ── */
+const dirOverlay  = document.getElementById('dirOverlay');
+const openDirSheet  = () => dirOverlay.classList.add('open');
+const closeDirSheet = () => dirOverlay.classList.remove('open');
+
+document.getElementById('btn-dir-open').addEventListener('click', openDirSheet);
+document.getElementById('dirCancel').addEventListener('click', closeDirSheet);
+dirOverlay.addEventListener('click', e => { if (e.target === dirOverlay) closeDirSheet(); });
+document.getElementById('btn-dir-ceremony').addEventListener('click', () => setTimeout(closeDirSheet, 300));
+document.getElementById('btn-dir-reception').addEventListener('click', () => setTimeout(closeDirSheet, 300));
+
+/* ── Calendar sheet ── */
+const TITLE    = 'Wedding of Ittymathew & Rosemary';
+const LOCATION = 'Marth Mariam Cathedral, Thrissur, Kerala';
+const DESC     = 'Wedding Ceremony at 10:10 AM followed by Reception & Lunch at Chaldean Centre, Thrissur.';
+const DT_START = '20260419T044000Z';
+const DT_END   = '20260419T084000Z';
+
+const calOverlay = document.getElementById('calOverlay');
+const openSheet  = () => calOverlay.classList.add('open');
+const closeSheet = () => calOverlay.classList.remove('open');
+
+document.getElementById('btn-cal-open').addEventListener('click', openSheet);
+document.getElementById('calCancel').addEventListener('click', closeSheet);
+calOverlay.addEventListener('click', e => { if (e.target === calOverlay) closeSheet(); });
+
+document.getElementById('btn-gcal').href =
+  'https://calendar.google.com/calendar/render?action=TEMPLATE'
+  + '&text='     + encodeURIComponent(TITLE)
+  + '&dates='    + DT_START + '/' + DT_END
+  + '&details='  + encodeURIComponent(DESC)
+  + '&location=' + encodeURIComponent(LOCATION);
+document.getElementById('btn-gcal').addEventListener('click', () => setTimeout(closeSheet, 300));
+
+document.getElementById('btn-ics').addEventListener('click', () => {
+  const ics = [
+    'BEGIN:VCALENDAR','VERSION:2.0',
+    'PRODID:-//Ittymathew & Rosemary//EN',
+    'CALSCALE:GREGORIAN','METHOD:PUBLISH',
+    'BEGIN:VEVENT',
+    'DTSTART:' + DT_START,'DTEND:' + DT_END,
+    'SUMMARY:' + TITLE,
+    'DESCRIPTION:' + DESC,
+    'LOCATION:' + LOCATION,
+    'STATUS:CONFIRMED',
+    'BEGIN:VALARM','TRIGGER:-PT1D','ACTION:DISPLAY',
+    'DESCRIPTION:Wedding tomorrow!','END:VALARM',
+    'END:VEVENT','END:VCALENDAR'
+  ].join('\r\n');
+  const a = Object.assign(document.createElement('a'), {
+    href: URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' })),
+    download: 'ittymathew-rosemary-wedding.ics'
+  });
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+  setTimeout(closeSheet, 300);
+});
+
+/* ── Toast ── */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2400);
+}
+
+/* ── Tap phone numbers → open WhatsApp ── */
+document.querySelectorAll('.phone-copy').forEach(el => {
+  el.style.cursor = 'pointer';
+  el.addEventListener('click', () => {
+    const num = el.dataset.phone.replace(/\D/g, ''); // strip + and spaces
+    window.open('https://wa.me/' + num, '_blank');
+  });
+});
+/* ── Lightbox ── */
+const lb       = document.getElementById('lightbox');
+const lbImg    = document.getElementById('lb-img');
+const lbCounter = document.getElementById('lb-counter');
+let lbIndex = 0;
+const gCards    = Array.from(document.querySelectorAll('#galleryDeck .polaroid'));
+const photoSrcs = gCards.map(c => c.querySelector('img').src);
+
+function lbShow(i) {
+  lbIndex = ((i % photoSrcs.length) + photoSrcs.length) % photoSrcs.length;
+  lbImg.src = photoSrcs[lbIndex];
+  lbCounter.textContent = (lbIndex + 1) + ' / ' + photoSrcs.length;
+  lb.classList.add('lb-open');
+  lb.setAttribute('aria-hidden', 'false');
+}
+function lbHide() {
+  lb.classList.remove('lb-open');
+  lb.setAttribute('aria-hidden', 'true');
+}
+
+gCards.forEach((card, i) => {
+  card.addEventListener('click', e => { e.stopPropagation(); lbShow(i); });
+});
+
+document.getElementById('lb-close').addEventListener('click', lbHide);
+document.getElementById('lb-prev').addEventListener('click', e => { e.stopPropagation(); lbShow(lbIndex - 1); });
+document.getElementById('lb-next').addEventListener('click', e => { e.stopPropagation(); lbShow(lbIndex + 1); });
+lb.addEventListener('click', e => { if (e.target === lb || e.target === lbImg) lbHide(); });
+
+/* swipe to navigate */
+let lbTx = null;
+lb.addEventListener('touchstart', e => { lbTx = e.touches[0].clientX; }, { passive: true });
+lb.addEventListener('touchend', e => {
+  if (lbTx === null) return;
+  const dx = e.changedTouches[0].clientX - lbTx;
+  lbTx = null;
+  if (Math.abs(dx) < 40) return;
+  lbShow(lbIndex + (dx < 0 ? 1 : -1));
+}, { passive: true });
+
+/* ── Envelope intro ── */
+(function () {
+  const env = document.getElementById('env');
+  let opened = false;
+
+  function openEnvelope() {
+    if (opened) return;
+    opened = true;
+
+    // 1. lift flap
+    env.classList.add('env-open');
+
+    // 2. white flash overlay fades in fast (0.45s) — right as flap lifts
+    setTimeout(function () { env.classList.add('env-white'); }, 200);
+
+    // 3. white is solid at ~650ms — now reveal content and start fading envelope
+    setTimeout(function () {
+      document.getElementById('scroller').classList.add('content-ready');
+      document.querySelector('.nav-dots').classList.add('content-ready');
+      env.classList.add('env-fade'); // 2s fade-out
+    }, 700);
+
+    // 4. remove after fade completes (700ms + 2000ms + buffer)
+    setTimeout(function () {
+      env.classList.add('env-done');
+      setTimeout(function () { env.remove(); }, 300);
+    }, 3000);
+  }
+
+  env.addEventListener('click',      openEnvelope);
+  env.addEventListener('touchstart', openEnvelope, { passive: true });
+}());
+
+</script>
+</body>
+</html>
